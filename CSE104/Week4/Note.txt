@@ -1,0 +1,22 @@
+EIGROSS:
+NET: after-tax income
+GROSS: before-tax income
+TAXRATE: tax rate
+	Formulas:
+TAX=NET/((100 - TAXRATE)/10)
+NET=(1-TAXRATE)*GROSS 
+GROSS = NET/(1-TAXRATE)
+
+S=P+I (principal + interest)/(gốc + lãi)
+rate: tỉ lệ lãi suất, n: tháng
+Lãi đơn(Simple Interest):
+General formula: P*(1 +rate *n)
+
+Lãi kép(Compound Interest)
+General formula: P*(1 +rate)^n
+=> n = log(1+rate)(S/P)
+=> months = (log(S/P)) / (log1+rate)
+E.g: result = (Math.log(expectedMoney / money)) / (Math.log(1 + (interestRate / 100)));
+
+
+
