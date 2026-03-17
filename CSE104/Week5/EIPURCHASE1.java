@@ -75,5 +75,6 @@ public class EIPURCHASE1 {
         customer1.setPrepaidAmount(sc.nextLong());
         customer1.setMonthlyPayment(sc.nextLong());
         customer1.display();
+        sc.close();
     }
 }

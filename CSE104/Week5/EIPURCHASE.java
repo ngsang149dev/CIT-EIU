@@ -13,6 +13,7 @@ public class EIPURCHASE {
 
         double monthlyRate = findInterestRate(X, monthlyPayment, installmentMonths);
         System.out.printf("%.7f", monthlyRate );
+        sc.close();
         /* Call Binary Search Method */
     }
 
