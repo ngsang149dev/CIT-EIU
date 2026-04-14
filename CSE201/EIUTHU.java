@@ -17,3 +17,4 @@ public class EIUTHU {
         System.out.println(firstString.length() + secondString.length() - count);
     }
 }
+// Completed
