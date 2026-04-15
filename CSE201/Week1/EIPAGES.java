@@ -13,22 +13,21 @@ public class EIPAGES {
         }
         Arrays.sort(pages);
 
-        int i = 0;
+        int i = 0; 
         while (i < n) {
             int p1 = i;
-            while (i + 1 < n && pages[i] + 1 == pages[i + 1]) {
+            while (i + 1 < n && pages[i] + 1 == pages[i+1]) {
                 i++;
             }
-
             int p2 = i;
             int gapSize = p2 - p1 + 1;
-
-            if (sb.length() > 0)
+            if (sb.length() > 0) {
                 sb.append(" ");
+            }
             if (gapSize > 2) {
                 sb.append(pages[p1]).append("-").append(pages[p2]);
             } else {
-                for (int j = p1; j <= p2; j++) {
+                for (int j = p1; j <= p2;j++) {
                     if (j > p1) {
                         sb.append(" ");
                     }
