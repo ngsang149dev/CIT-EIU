@@ -22,7 +22,7 @@ public class EIORDERS {
             result = "none";
         }
         System.out.println(result);
-
+        sc.close();
         
     }
 

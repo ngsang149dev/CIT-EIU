@@ -44,9 +44,8 @@ public class EIMONE {
         if (is1 > 0) {
             System.out.println("1 " + is1);
         }
+        sc.close();
     }
-
-    
 }
 
 

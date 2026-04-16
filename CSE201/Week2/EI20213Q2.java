@@ -11,28 +11,21 @@ public class EI20213Q2 {
 
     public static void main(String[] args) {
         int n = sc.nextInt();
-        int[] numbers = new int[n];
-        for (int i = 0; i < n; i++) {
-            numbers[i] = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n;i++) {
+            arr[i] = sc.nextInt();
         }
-        Arrays.sort(numbers);
-        int value = 0;
-        int count = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            if (i == 0) {
-                value = numbers[i];
-                count = 1;
-            } else {
-                if (numbers[i] == numbers[i - 1]) {
-                    count++;
-
-                } else {
-                    sb.append(value).append(" ").append(count).append("\n");
-                    count = 1;
-                    value = numbers[i];
-                }
+        Arrays.sort(arr);
+        int value = arr[0], count = 1;
+        for (int i = 1; i < n;i++) {
+            if (arr[i] == arr[i-1])
+                count++;
+            else {
+                sb.append(value).append(" ").append(count).append("\n");
+                count = 1;    //reset
+                value = arr[i];  
             }
-            if (i == numbers.length - 1) {
+            if (i == arr.length-1) {
                 sb.append(value).append(" ").append(count).append("\n");
             }
         }

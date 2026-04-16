@@ -9,6 +9,7 @@ public class EITHU {
         String secondString = sc.next();
         int p= process(firstString, secondString);
         System.out.println(p);
+        sc.close();
         
     }
 

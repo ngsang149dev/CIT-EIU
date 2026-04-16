@@ -56,5 +56,6 @@ public class EIPOINT {
                 break;
             }
         }
+        sc.close();
     }
 }

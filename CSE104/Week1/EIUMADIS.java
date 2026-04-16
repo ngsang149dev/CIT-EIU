@@ -20,7 +20,8 @@ public class EIUMADIS {
                 minValue = arr[i];
             }
         }  
-        System.out.println(maxDistance);    
+        System.out.println(maxDistance);   
+        sc.close(); 
     }
 
 }

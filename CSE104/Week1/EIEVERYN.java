@@ -34,5 +34,6 @@ public class EIEVERYN {
                 sb.append("No\n");
         }
         System.out.println(sb.toString());
+        sc.close();
     }
 }
