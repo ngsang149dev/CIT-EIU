@@ -1,0 +1,37 @@
+classDiagram
+    class Customer {
+        - name: String
+        - address: String
+        - phone: String
+        + Customer()
+        + getter()
+        + setter()
+    }
+
+    class Cake {
+        - typeOfCake: char
+        - tier: int 
+        - eventDate: String
+        + Cake()
+        + getter()
+        + setter()
+    }
+
+    class PriceQuote {
+        - ingredientCost: double
+        - laborCharge: double
+        - deliveryFee: double
+        + PriceQuote()
+        + setter()
+        + getter()
+        + getTotalAfterTax()
+    }
+
+    class Order {
+        - customer: Customer
+        - cake: Cake
+        - orderId: int
+        + Order()
+        + getter()
+        + setter()
+    }

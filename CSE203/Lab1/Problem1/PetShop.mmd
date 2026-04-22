@@ -1,0 +1,30 @@
+classDiagram
+    class Customer {
+        - name: String
+        - address: String
+        - phone: String
+        + Customer()
+        + getter()
+        + setter()
+    }
+
+    class Pet {
+        - CustomerID: Customer
+        - breed: String
+        - age: int 
+        - weight: double
+        + Pet() 
+        + getter()
+        + setter()
+    }
+
+    class ServiceEstimate {
+        - grommingCost: double
+        - taxRate: double
+        - additionalCareCharge: double
+        + ServiceEstimate()
+        + getter()
+        + setter()
+        + getTotalCostAfterTax() double
+    }
+

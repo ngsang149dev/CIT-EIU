@@ -1,0 +1,26 @@
+classDiagram
+    class Customer {
+        - name: String
+        - address: String
+        - licenseNumber: Sring
+        + Customer()
+        + getter()
+        + setter()
+    }
+
+    class Car {
+        - model: String
+        - rentalPeriod: int
+        - mileageLimit: double
+        + Car()
+        + getter()
+        + setter()
+    }
+
+    class RentalAgreement {
+        - baseFee: double
+        - mileageFee: double
+        - tax: double
+        + RentalAgreement()
+        + getTotalCostAferTax()
+    }

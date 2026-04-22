@@ -13,6 +13,25 @@ public class EIPAGES {
         }
         Arrays.sort(pages);
 
+        boolean isContinued = false;
+        sb.append(pages[0]);
+        for (int i = 1; i < n;i++) {
+            if (isContinued) {
+                if (i == n-1 || pages[i+1] - pages[i] > 1) {
+                    sb.append(pages[i]);
+                    isContinued = false;
+                }
+                continue;
+            }
+
+            if (i != n-1 && pages[i] == pages[i-1] + 1 && pages[i] == pages[i+1] -1) {
+                isContinued = true;
+                sb.append("-");
+                continue;
+            }
+            sb.append(" ").append(pages[i]);
+        }
+        System.out.println(sb);
         // int i = 0; 
         // while (i < n) {
         //     int p1 = i;
@@ -36,25 +55,6 @@ public class EIPAGES {
         //     }
         //     i++;
         // }
-        sb.append(pages[0]);
-        int count = 1;
-        for (int i = 1; i < n;i++) {
-            if (pages[i] == pages[i-1] + 1) {
-                count++;
-            }
-            else {
-                if (count == 2) {
-                    sb.append(pages[i]).append(" ");
-                } else if (i >= 3) {
-                    sb.append("-");
-                }
-            }
-            if (i == pages.length-1) {
-                sb.append(pages[i]);
-            }
-        }
-
-        System.out.println(sb);
     }
 }
 // Completed

@@ -1,4 +1,5 @@
 public class Employee {
+
     private String name;
     private int idNumber;
     private String department;
@@ -13,7 +14,7 @@ public class Employee {
 
     public Employee(String name, int idNumber) {
         this.name = name;
-        this.idNumber = idNumber;
+        this.idNumber = 0;
         this.department = "";
         this.position = "";
     }
@@ -56,13 +57,9 @@ public class Employee {
     public void setPosition(String position) {
         this.position = position;
     }
-
-    public void display() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(this.name).append(" ").append(this.idNumber).append(" ").append(this.department).append(" ").append(this.position);
-        System.out.println(sb);
+    
+    @Override
+    public String toString() {
+        return "ID: %s \n Name: %s \n Department: %s \n Position: %s".formatted(this.idNumber, this.name, this.department, this.position);
     }
-
-    
-    
 }

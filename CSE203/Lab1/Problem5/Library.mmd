@@ -1,0 +1,50 @@
+classDiagram 
+    class User {
+        - userId: int 
+        - userName: String
+        - email: String
+        - HoldingBooks: List<Book>
+        + User()
+        + getter()
+        + setter()
+        + getCountOverdue() int
+        + isEligible() boolean 
+    }
+
+    class Book {
+        - isbn: int 
+        - title: String
+        - isAvalable: boolean
+        - author: String
+        + Book()
+        + getter()
+        + setter()
+        + checkAvailability() boolean
+        + setAvailable(status: boolean): void
+    }
+
+    class BorrowingRecord {
+        - borrowingUser: User
+        - borrowingBook: Book 
+        - borrowingDate: Date
+        + BorrowingRecord()
+        + getter()
+        + setter()
+        + isOverdue() boolean
+        + getDueDate() Date
+    }
+
+    class LibrarianManagement {
+        - userId: String
+        - userName: String
+        - borrowingHistory: List
+        + checkUser(user: User): boolean
+        + checkEligibility(user: User): boolean
+        + createRecord(user: User, book: Book, days: int) BorrowingRecord
+    }
+
+    BorrowingRecord --> User: borrowingUser
+    BorrowingRecord --> Book: borrowedBook
+    LibrarianManagement ..> BorrowingRecord: creates
+    LibrarianManagement --> User : verifies
+    LibrarianManagement --> Book : checks

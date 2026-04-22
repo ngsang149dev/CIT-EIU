@@ -1,0 +1,27 @@
+classDiagram
+    class Customer {
+        - name: String
+        - address: String
+        - phone: String
+        + Customer()
+        + getter()
+        + setter()
+    }
+
+    class Session {
+        - typeOf: String
+        - duration: int
+        - date: Date
+        + Session()
+        + getter()
+        + setter()
+    }
+
+    class BookingConfirmation {
+        - baseFee: double
+        - editingCharge: double
+        - tax: double
+        + BookingConfirmation()
+        + getter()
+        + setter()
+    }
