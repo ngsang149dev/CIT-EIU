@@ -27,11 +27,6 @@ classDiagram
         + getTotalAfterTax()
     }
 
-    class Order {
-        - customer: Customer
-        - cake: Cake
-        - orderId: int
-        + Order()
-        + getter()
-        + setter()
-    }
+    Customer --> Cake: orders
+    Cake *-- PriceQuote: belongs to
+

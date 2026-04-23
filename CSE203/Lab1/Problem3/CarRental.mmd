@@ -24,3 +24,6 @@ classDiagram
         + RentalAgreement()
         + getTotalCostAferTax()
     }
+
+    Customer --> Car: owns
+    Car *-- RentalAgreement: belongs to

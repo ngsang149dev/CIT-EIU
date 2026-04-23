@@ -3,6 +3,7 @@ classDiagram
         - name: String
         - address: String
         - phone: String
+        - id: String
         + Customer()
         + getter()
         + setter()
@@ -27,4 +28,7 @@ classDiagram
         + setter()
         + getTotalCostAfterTax() double
     }
+
+    Customer --> Pet: owns
+    Pet *-- ServiceEstimate: belongs to
 

@@ -25,3 +25,6 @@ classDiagram
         + getter()
         + setter()
     }
+
+    Customer --> Session: orders
+    Session *-- BookingConfirmation: belongs to
