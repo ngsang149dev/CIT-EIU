@@ -14,7 +14,7 @@ public class Employee {
 
     public Employee(String name, int idNumber) {
         this.name = name;
-        this.idNumber = 0;
+        this.idNumber = idNumber;
         this.department = "";
         this.position = "";
     }
@@ -63,3 +63,4 @@ public class Employee {
         return "ID: %s \n Name: %s \n Department: %s \n Position: %s".formatted(this.idNumber, this.name, this.department, this.position);
     }
 }
+
