@@ -7,24 +7,26 @@ classDiagram
         + getter()
         + setter()
         + receiveBooking(booking: Booking) void
+        + toString() String
     }
 
 
     class Booking {
+        - sessionType: SessionType
         - baseFee: double
         - editingCharge: double
-        - date: Date
+        - date: LocalDate
         - duration: int
-        - totalWithTax: double
-        + getTotalAfterTax()
+        + getTotalAfterTax() double
         + Booking()
         + getter()
         + setter()
+        + toString() String
     }
 
     class Const {
         <<constant>>
-        + TAX: double
+        +$TAX:double
     }
 
     class SessionType {
@@ -34,6 +36,6 @@ classDiagram
         PORTRAIT
     }
 
-    Customer --> Booking: orders
-    Booking ..> SessionType: uses
+    Customer o-- Booking: orders
+    Booking --> SessionType: uses
     Booking ..> Const: uses

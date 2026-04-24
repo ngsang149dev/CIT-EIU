@@ -1,50 +1,46 @@
 classDiagram 
     class User {
-        - userId: int 
-        - userName: String
+        - id: int 
+        - name: String
         - email: String
-        - HoldingBooks: List<Book>
         + User()
         + getter()
-        + setter()
-        + getCountOverdue() int
-        + isEligible() boolean 
+        + setter() 
+        + toString() String
     }
 
     class Book {
-        - isbn: int 
+        - isbn: String
         - title: String
         - isAvalable: boolean
         - author: String
         + Book()
         + getter()
         + setter()
-        + checkAvailability() boolean
-        + setAvailable(status: boolean): void
+        + toString() String
     }
 
     class BorrowingRecord {
-        - borrowingUser: User
-        - borrowingBook: Book 
-        - borrowingDate: Date
+        - borrowingDate: LocalDate
+        - dueDate: LocalDate
         + BorrowingRecord()
         + getter()
         + setter()
         + isOverdue() boolean
-        + getDueDate() Date
+        + toString() String
     }
 
     class LibraryManagement {
-        - userId: String
-        - userName: String
-        - borrowingHistory: List
-        + checkUser(user: User): boolean
+        - borrowingHistory: List <BorrowingRecord>
+        + LibraryManagement()
+        + addRecord(record: BorrowingRecord) void
         + checkEligibility(user: User): boolean
-        + createRecord(user: User, book: Book, days: int) BorrowingRecord
+        + borrowBook(user: User, book: Book, days: int) BorrowingRecord
+        + toString() String
     }
 
-    BorrowingRecord --> User: borrowingUser
-    BorrowingRecord --> Book: borrowedBook
-    LibraryManagement ..> BorrowingRecord: creates
-    LibraryManagement --> User : verifies
-    LibraryManagement --> Book : checks
+    BorrowingRecord *-- User: borrowingUser
+    BorrowingRecord *-- Book: borrowedBook
+    LibraryManagement o-- BorrowingRecord: creates
+    LibraryManagement o-- User : verifies
+    LibraryManagement o-- Book : checks

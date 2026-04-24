@@ -7,32 +7,34 @@ classDiagram
         + getter()
         + setter()
         + receiveQuote(quote: Quote) void  
+        + toString() String
     }
 
     class Cake {
         - type: String
-        - tiers: String
+        - tiers: int
         - eventDate: LocalDate
 
         + Cake()
         + getter()
         + setter()
+        + toString() String
     }
 
     class Quote {
         - ingredientCost: double
         - laborCharge: double
         - deliveryFee: double
-        - totalWithTax: double
         + Quote()
         + setter()
         + getter()
         + calculateTotal() double
+        + toString() String
     }
 
     class Const {
         <<constant>>
-        + TAX() double
+        +$TAX: double 
     }
 
     class Event {

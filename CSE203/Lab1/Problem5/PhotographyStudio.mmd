@@ -1,0 +1,41 @@
+classDiagram
+    class Customer {
+        - name: String
+        - address: String
+        - phone: String
+        + Customer()
+        + getter()
+        + setter()
+        + receiveBooking(booking: Booking) void
+        + toString() String
+    }
+
+
+    class Booking {
+        - sessionType: SessionType
+        - baseFee: double
+        - editingCharge: double
+        - date: LocalDate
+        - duration: int
+        + getTotalAfterTax() double
+        + Booking()
+        + getter()
+        + setter()
+        + toString() String
+    }
+
+    class Const {
+        <<constant>>
+        +$TAX:double
+    }
+
+    class SessionType {
+        <<enumeration>> 
+        FAMILY
+        WEDDING
+        PORTRAIT
+    }
+
+    Customer o-- Booking: orders
+    Booking --> SessionType: uses
+    Booking ..> Const: uses

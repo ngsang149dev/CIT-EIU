@@ -7,29 +7,34 @@ classDiagram
         + getter()
         + setter()
         + receiveAgreement(agreement: Agreement) void
+        + toString() String
     }
     class Car {
         - model: String
-        - rentalPeriod: int
         - make: String
-        - mileageLimit: double
         + Car()
         + getter()
         + setter()
+        + toString() String
     }
     class Agreement {
+        - mileageLimit: double
+        - rentalPeriod: int
         - rentalFee: double
         - mileageFee: double
-        - totalWithTax: double
         + Agreement()
-        + getTotalAfterTax()
+        + getTotalAfterTax() double
+        + getter()
+        + setter()
+        + toString()
     }
     class Const {
-        << constant >> 
-        + TAX: double
+        <<constant>> 
+        + $TAX: double
     }
 
-    Customer --> Car: rents
-    Customer --> Agreement: receives
-    Car --> Agreement: has
-    Agreement ..> Const: uses
+    Agreement o-- Car
+    Customer ..> Agreement
+    Customer o-- Car
+    Agreement --> Const
+    

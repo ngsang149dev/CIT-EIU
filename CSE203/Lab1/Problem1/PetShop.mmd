@@ -4,41 +4,54 @@ classDiagram
         - address: String
         - phone: String
         - id: String
+        - pets: List<Pet>
         + Customer()
         + getter()
         + setter()
+        + toString() String
         + receiveEstimate(e: ServiceEstimate) void
     }
 
     class Pet {
+        - name: String
         - breed: String
         - age: int 
         - weight: double
         + Pet() 
         + getter()
         + setter()  
+        + toString() String
     }
 
     class ServiceEstimate {
-        - grommingCost: double
+        - groomingCost: double
         - taxRate: double
         - additionalCareCharge: double
+        - date: LocalDate
         + ServiceEstimate()
         + getter()
         + setter()
         + getTotalCostAfterTax() double
+        + toString() String
     }
 
     class PetShop {
         - shopName: String
         - address: String
         - phone: String
+        - customer: List<Customer>
+        - serviceEstimate: List<ServiceEstimate>
         + addCustomer(c: Customer)
+        + PetShop()
+        + getter()
+        + setter()
+        + toString() String
     }
 
     Customer o-- Pet: owns
     Pet *-- ServiceEstimate: has
     PetShop o-- Customer: serves
-    PetShop o-- Pet: services    
+    PetShop o-- Pet: services  
+    PetShop *-- ServiceEstimate: gains  
 
 
