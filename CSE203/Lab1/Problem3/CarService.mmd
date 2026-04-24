@@ -1,0 +1,35 @@
+classDiagram
+    class Customer {
+        - name: String
+        - address: String
+        - licenseNumber: String
+        + Customer()
+        + getter()
+        + setter()
+        + receiveAgreement(agreement: Agreement) void
+    }
+    class Car {
+        - model: String
+        - rentalPeriod: int
+        - make: String
+        - mileageLimit: double
+        + Car()
+        + getter()
+        + setter()
+    }
+    class Agreement {
+        - rentalFee: double
+        - mileageFee: double
+        - totalWithTax: double
+        + Agreement()
+        + getTotalAfterTax()
+    }
+    class Const {
+        << constant >> 
+        + TAX: double
+    }
+
+    Customer --> Car: rents
+    Customer --> Agreement: receives
+    Car --> Agreement: has
+    Agreement ..> Const: uses

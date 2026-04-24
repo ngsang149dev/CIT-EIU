@@ -34,7 +34,7 @@ classDiagram
         + getDueDate() Date
     }
 
-    class LibrarianManagement {
+    class LibraryManagement {
         - userId: String
         - userName: String
         - borrowingHistory: List
@@ -45,6 +45,6 @@ classDiagram
 
     BorrowingRecord --> User: borrowingUser
     BorrowingRecord --> Book: borrowedBook
-    LibrarianManagement ..> BorrowingRecord: creates
-    LibrarianManagement --> User : verifies
-    LibrarianManagement --> Book : checks
+    LibraryManagement ..> BorrowingRecord: creates
+    LibraryManagement --> User : verifies
+    LibraryManagement --> Book : checks

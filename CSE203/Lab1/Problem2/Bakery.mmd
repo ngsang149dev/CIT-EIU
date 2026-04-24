@@ -6,27 +6,43 @@ classDiagram
         + Customer()
         + getter()
         + setter()
+        + receiveQuote(quote: Quote) void  
     }
 
     class Cake {
-        - typeOfCake: char
-        - tier: int 
-        - eventDate: String
+        - type: String
+        - tiers: String
+        - eventDate: LocalDate
+
         + Cake()
         + getter()
         + setter()
     }
 
-    class PriceQuote {
+    class Quote {
         - ingredientCost: double
         - laborCharge: double
         - deliveryFee: double
-        + PriceQuote()
+        - totalWithTax: double
+        + Quote()
         + setter()
         + getter()
-        + getTotalAfterTax()
+        + calculateTotal() double
     }
 
-    Customer --> Cake: orders
-    Cake *-- PriceQuote: belongs to
+    class Const {
+        <<constant>>
+        + TAX() double
+    }
 
+    class Event {
+        <<enumeration>>
+        WEDDING
+        BIRTHDAY
+    }
+
+    Customer --> Quote: receives
+    Customer o-- Cake: orders
+    Event --> Cake: uses
+    Cake *-- Quote: has
+    Quote --> Const: uses

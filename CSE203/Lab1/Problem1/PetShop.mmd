@@ -7,16 +7,16 @@ classDiagram
         + Customer()
         + getter()
         + setter()
+        + receiveEstimate(e: ServiceEstimate) void
     }
 
     class Pet {
-        - CustomerID: Customer
         - breed: String
         - age: int 
         - weight: double
         + Pet() 
         + getter()
-        + setter()
+        + setter()  
     }
 
     class ServiceEstimate {
@@ -29,6 +29,16 @@ classDiagram
         + getTotalCostAfterTax() double
     }
 
-    Customer --> Pet: owns
-    Pet *-- ServiceEstimate: belongs to
+    class PetShop {
+        - shopName: String
+        - address: String
+        - phone: String
+        + addCustomer(c: Customer)
+    }
+
+    Customer o-- Pet: owns
+    Pet *-- ServiceEstimate: has
+    PetShop o-- Customer: serves
+    PetShop o-- Pet: services    
+
 

@@ -6,25 +6,34 @@ classDiagram
         + Customer()
         + getter()
         + setter()
+        + receiveBooking(booking: Booking) void
     }
 
-    class Session {
-        - typeOf: String
-        - duration: int
-        - date: Date
-        + Session()
-        + getter()
-        + setter()
-    }
 
-    class BookingConfirmation {
+    class Booking {
         - baseFee: double
         - editingCharge: double
-        - tax: double
-        + BookingConfirmation()
+        - date: Date
+        - duration: int
+        - totalWithTax: double
+        + getTotalAfterTax()
+        + Booking()
         + getter()
         + setter()
     }
 
-    Customer --> Session: orders
-    Session *-- BookingConfirmation: belongs to
+    class Const {
+        <<constant>>
+        + TAX: double
+    }
+
+    class SessionType {
+        <<enumeration>> 
+        FAMILY
+        WEDDING
+        PORTRAIT
+    }
+
+    Customer --> Booking: orders
+    Booking ..> SessionType: uses
+    Booking ..> Const: uses

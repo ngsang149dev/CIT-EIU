@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class EISW1 {
 
     static Scanner sc = new Scanner(System.in);
+    static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) {
         int n = sc.nextInt();
         int k = sc.nextInt();
@@ -15,9 +16,11 @@ public class EISW1 {
         }
 
         Arrays.sort(arr);
-        int p1 = 0, p2 = 0, diff = 0;
-        for (int i = 0; i < n;i++) {
-            p1 = arr[i];
+        int min =Integer.MAX_VALUE;
+        for (int i = 0; i + k -1 < arr.length;i++) {
+            int gap = arr[i+k-1] - arr[i];
+            min = Math.min(min, gap);
         }
+        System.out.println(min);
     }
 }
