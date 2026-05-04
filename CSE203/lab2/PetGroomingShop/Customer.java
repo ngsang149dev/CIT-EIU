@@ -1,4 +1,3 @@
-package CSE203.lab2.PetGroomingShop;
 
 
 public class Customer {

@@ -1,4 +1,4 @@
-package CSE203.lab2.EIULibrary;
+
 
 public class User {
     private String id;
@@ -10,11 +10,11 @@ public class User {
         this.name = name;
     }
 
-    public String getId() {
+    public String getID() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setID(String id) {
         this.id = id;
     }
 

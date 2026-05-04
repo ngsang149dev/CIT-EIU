@@ -1,5 +1,4 @@
-package CSE203.lab2.CarRentals;
 
 public class Const {
-    public static double TAX;
+    public static final double TAX = 0.1;
 }

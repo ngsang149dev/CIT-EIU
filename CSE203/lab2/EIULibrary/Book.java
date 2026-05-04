@@ -1,4 +1,3 @@
-package CSE203.lab2.EIULibrary;
 
 public class Book {
     private String isbn;

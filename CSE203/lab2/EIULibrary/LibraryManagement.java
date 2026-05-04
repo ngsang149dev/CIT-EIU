@@ -1,4 +1,4 @@
-package CSE203.lab2.EIULibrary;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +36,7 @@ public class LibraryManagement {
         return borrowingRecords.stream().filter(record -> record.getUser().equals(user) && record.isOverDue()).count() < 1;
     }
 
-    public void showAllUser() {
+    public void showAllUsers() {
         this.users.stream().forEach(System.out::println);
     }
 

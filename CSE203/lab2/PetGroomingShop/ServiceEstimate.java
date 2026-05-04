@@ -1,8 +1,8 @@
-package CSE203.lab2.PetGroomingShop;
+
 
 public class ServiceEstimate {
     private double groomingCost;
-    private double additonalCareCost;
+    private double additionalCareCost;
     private double tax;
     private Pet pet;
 
@@ -18,12 +18,12 @@ public class ServiceEstimate {
         this.groomingCost = groomingCost;
     }
 
-    public double getAdditonalCareCost() {
-        return additonalCareCost;
+    public double getAdditionalCareCost() {
+        return additionalCareCost;
     }
 
-    public void setAdditonalCareCost(double additonalCareCost) {
-        this.additonalCareCost = additonalCareCost;
+    public void setAdditionalCareCost(double additonalCareCost) {
+        this.additionalCareCost = additonalCareCost;
     }
 
     public double getTax() {
@@ -43,11 +43,10 @@ public class ServiceEstimate {
     }
 
     public double getTotalCostAfterTax() {
-        double subtotal = this.groomingCost + this.additonalCareCost;
-        return subtotal * (1 + this.tax);
+        return (groomingCost + additionalCareCost) * (1 + tax);
     }
 
     public String toString() {
-        return "Pet: %s \n Grooming Cost: %d \n Additional Care Cost: %d \n Tax: %d".formatted(this.pet,this.groomingCost,this.additonalCareCost,this.tax);
+        return "Pet: %s \n Grooming Cost: %d \n Additional Care Cost: %d \n Tax: %d".formatted(this.pet,this.groomingCost,this.additionalCareCost,this.tax);
     }
 }

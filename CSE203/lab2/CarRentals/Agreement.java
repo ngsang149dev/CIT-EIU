@@ -1,4 +1,3 @@
-package CSE203.lab2.CarRentals;
 
 public class Agreement {
     private String purpose;
@@ -46,8 +45,7 @@ public class Agreement {
     }
 
     public double getRentalCostAfterTax() {
-        double subtotal = this.baseRentalFee + this.mileageFee;
-        return subtotal * (1 + Const.TAX);
+        return (baseRentalFee + mileageFee) * (1 + Const.TAX);
     }
 
     public String toString() {
