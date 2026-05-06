@@ -1,4 +1,4 @@
-package CSE203.lab2.CarRentals;
+
 
 public class Customer {
     private String name;

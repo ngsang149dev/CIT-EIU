@@ -1,4 +1,4 @@
-package CSE203.lab2.DelightsBakery;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,8 +47,7 @@ public class Quote {
         this.cake = cake;
     }
     public double getPriceAferTax() {
-        double subtotal = this.laborCharge + this.deliveryFee;
-        return  subtotal*(1+ Const.tax);
+        return  (this.laborCharge + this.deliveryFee)*(1+ Const.TAX);
     } 
     
     public String toString() {

@@ -1,4 +1,4 @@
-package CSE203.lab2.PetGroomingShop;
+
 
 public class Pet {
     private String breed;
@@ -50,6 +50,6 @@ public class Pet {
     }
 
     public String toString() {
-        return "Owner: %s \n Breed: %s \n Age: %d \n Weight: %d".formatted(this.customer, this.breed, this.age, this.weight);
+        return "Breed: %s \n Age: %s \n Weight: %s \n Customer: %s".formatted(this.breed, this.age, this.weight, this.customer);
     }
 }
