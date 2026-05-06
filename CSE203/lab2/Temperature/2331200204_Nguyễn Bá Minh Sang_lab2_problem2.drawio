@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="pPC0-yUijsZqVEd2jtQ3">
+    <mxGraphModel dx="1650" dy="947" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-13" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=29.80454600941051;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Temperature" vertex="1">
+          <mxGeometry height="337.8045460094105" width="338" x="20" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-14" parent="P7uko0YGqJQE9m5H5HxG-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- ftemp: double" vertex="1">
+          <mxGeometry height="30" width="338" y="29.80454600941051" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-15" parent="P7uko0YGqJQE9m5H5HxG-13" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
+          <mxGeometry height="8" width="338" y="59.804546009410515" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-16" parent="P7uko0YGqJQE9m5H5HxG-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ Temperature()" vertex="1">
+          <mxGeometry height="30" width="338" y="67.80454600941052" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-17" parent="P7uko0YGqJQE9m5H5HxG-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ Temperature(ftemp: double)" vertex="1">
+          <mxGeometry height="30" width="338" y="97.80454600941052" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-18" parent="P7uko0YGqJQE9m5H5HxG-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ getter()" vertex="1">
+          <mxGeometry height="30" width="338" y="127.80454600941052" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-19" parent="P7uko0YGqJQE9m5H5HxG-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ setter()" vertex="1">
+          <mxGeometry height="30" width="338" y="157.8045460094105" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-20" parent="P7uko0YGqJQE9m5H5HxG-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ setFahrenheit(temp: double) : void" vertex="1">
+          <mxGeometry height="30" width="338" y="187.8045460094105" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-21" parent="P7uko0YGqJQE9m5H5HxG-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ getFahrenheit() : double" vertex="1">
+          <mxGeometry height="30" width="338" y="217.8045460094105" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-22" parent="P7uko0YGqJQE9m5H5HxG-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ getCelsius() : double" vertex="1">
+          <mxGeometry height="30" width="338" y="247.8045460094105" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-23" parent="P7uko0YGqJQE9m5H5HxG-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ getKelvin() : double" vertex="1">
+          <mxGeometry height="30" width="338" y="277.8045460094105" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-24" parent="P7uko0YGqJQE9m5H5HxG-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ toString() : String" vertex="1">
+          <mxGeometry height="30" width="338" y="307.8045460094105" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

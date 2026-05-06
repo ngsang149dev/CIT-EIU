@@ -21,7 +21,7 @@ public class EIPFS2 {
                 tempArr[i] = tempArr[i-1] + arr[i];
             }
         }
-
+        
         for (int t = 0; t < task;t++) {
             int left = sc.nextInt();
             int right = sc.nextInt();

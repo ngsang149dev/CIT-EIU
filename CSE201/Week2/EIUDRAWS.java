@@ -1,4 +1,4 @@
-package CSE201.Week2;
+package Week2;
 
 import java.util.*;
 

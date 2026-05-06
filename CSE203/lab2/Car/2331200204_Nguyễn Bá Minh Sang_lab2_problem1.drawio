@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="pPC0-yUijsZqVEd2jtQ3">
+    <mxGraphModel dx="1650" dy="947" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=29.804543235085227;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Car" vertex="1">
+          <mxGeometry height="337.80454323508525" width="291" x="20" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-2" parent="P7uko0YGqJQE9m5H5HxG-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- yearModel: int" vertex="1">
+          <mxGeometry height="30" width="291" y="29.804543235085227" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-3" parent="P7uko0YGqJQE9m5H5HxG-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- make: String" vertex="1">
+          <mxGeometry height="30" width="291" y="59.80454323508523" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-4" parent="P7uko0YGqJQE9m5H5HxG-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- speed: int" vertex="1">
+          <mxGeometry height="30" width="291" y="89.80454323508522" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-5" parent="P7uko0YGqJQE9m5H5HxG-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
+          <mxGeometry height="8" width="291" y="119.80454323508522" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-6" parent="P7uko0YGqJQE9m5H5HxG-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ Car()" vertex="1">
+          <mxGeometry height="30" width="291" y="127.80454323508522" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-7" parent="P7uko0YGqJQE9m5H5HxG-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ Car(yearModel: int, make: String)" vertex="1">
+          <mxGeometry height="30" width="291" y="157.80454323508522" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-8" parent="P7uko0YGqJQE9m5H5HxG-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ getter()" vertex="1">
+          <mxGeometry height="30" width="291" y="187.80454323508522" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-9" parent="P7uko0YGqJQE9m5H5HxG-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ setter()" vertex="1">
+          <mxGeometry height="30" width="291" y="217.80454323508522" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-10" parent="P7uko0YGqJQE9m5H5HxG-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ accelerate() : int" vertex="1">
+          <mxGeometry height="30" width="291" y="247.80454323508522" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-11" parent="P7uko0YGqJQE9m5H5HxG-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ brake() : int" vertex="1">
+          <mxGeometry height="30" width="291" y="277.80454323508525" as="geometry" />
+        </mxCell>
+        <mxCell id="P7uko0YGqJQE9m5H5HxG-12" parent="P7uko0YGqJQE9m5H5HxG-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ toString() : String" vertex="1">
+          <mxGeometry height="30" width="291" y="307.80454323508525" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
