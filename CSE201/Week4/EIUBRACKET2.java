@@ -25,7 +25,7 @@ public class EIUBRACKET2 {
                     if (e == ']' && first != '[') flag = false;
                 }
             }
-            if (stack.isEmpty()) flag = true;
+            flag = flag && stack.isEmpty();
             System.out.println(flag);           
         }
     }

@@ -59,30 +59,29 @@ public class AlgorithmsPractice3 {
 
     static void TwoPointer(int[] sortedArr, long targetSum) {
         int p1 = 0;
-        int p2 = sortedArr.length - 1;
-        long currentSum = 0;
+        int p2 = sortedArr.length-1;
         long bestLeft = -1;
         long bestRight = -1;
         long bestDiff = Long.MAX_VALUE;
         while (p1 < p2) {
-            currentSum = sortedArr[p1] + sortedArr[p2];
-            if (currentSum == targetSum) {
-                long currentDiff = sortedArr[p2] - sortedArr[p1];
-                if (currentDiff < bestDiff) {
-                    bestDiff = currentDiff;
+            int currSum = sortedArr[p1] + sortedArr[p2];
+            if (currSum == targetSum) {
+                int currDiff = Math.abs(sortedArr[p2] - sortedArr[p1]);
+                if (currDiff < bestDiff) {
+                    bestDiff = currDiff;
                     bestLeft = sortedArr[p1];
                     bestRight = sortedArr[p2];
                 }
                 p1++;
                 p2--;
-
-            } else if (currentSum < targetSum) {
-                p1++;
-            } else {
-                p2--;
             }
-
+            else if (currSum > targetSum) {
+                p2--;
+            } else {
+                p1++;
+            }
         }
+
         sb.append(bestLeft).append(" ").append(bestRight).append("\n");
 
     }

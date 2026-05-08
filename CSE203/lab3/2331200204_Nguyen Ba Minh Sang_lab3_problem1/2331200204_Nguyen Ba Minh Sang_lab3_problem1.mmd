@@ -1,0 +1,22 @@
+classDiagram
+    class RetailItem {
+        - description: String
+        - unitOnHand: int 
+        - price: double
+
+        + RetailItem(description: String, unitOnHand: int, price: double)
+        + getter()
+        + setter()
+    }
+
+    class CashRegister {
+        - retailItem: RetailItem
+        - quanityOfItems: int
+        + CashRegister(retailItem: RetailItem)
+        + getSubtotal() double
+        + getTax() double
+        + getTotal() double
+
+    }
+
+    CashRegister o-- RetailItem
