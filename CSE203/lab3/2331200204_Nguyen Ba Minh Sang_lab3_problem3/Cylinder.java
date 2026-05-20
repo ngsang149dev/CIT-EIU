@@ -7,8 +7,33 @@ public class Cylinder implements Shape {
         this.height = height;
     }
     
+    @Override
     public double area() {
         return Math.PI * this.radius * this.radius * this.height;
+    }
+
+
+
+    public double getRadius() {
+        return radius;
+    }
+
+
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+
+
+    public double getHeight() {
+        return height;
+    }
+
+
+
+    public void setHeight(double height) {
+        this.height = height;
     }  
 
 }

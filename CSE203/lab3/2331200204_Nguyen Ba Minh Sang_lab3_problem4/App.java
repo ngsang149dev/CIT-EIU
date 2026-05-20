@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class App {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        FuelGauge fg1 = new FuelGauge(5);
+        FuelGauge fg1 = new FuelGauge(360);
         Odometer m1 = new Odometer(fg1);
         
         // while (fg1.getGallon() < Const.CAR_MAX_GALLON) {

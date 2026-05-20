@@ -1,10 +1,12 @@
 
 public class CashRegister {
     private RetailItem retailItem;
-    private int quanityOfItems;
-    public CashRegister(RetailItem retailItem, int quanityOfItems) {
+    private int quantity;
+    private static final double TAX_RATE = 0.06;
+
+    public CashRegister(RetailItem retailItem, int quantity) {
         this.retailItem = retailItem;
-        this.quanityOfItems = quanityOfItems;
+        this.quantity = quantity;
     }
     public RetailItem getRetailItem() {
         return retailItem;
@@ -12,19 +14,19 @@ public class CashRegister {
     public void setRetailItem(RetailItem retailItem) {
         this.retailItem = retailItem;
     }
-    public int getQuanityOfItems() {
-        return quanityOfItems;
+    public int getQuantity() {
+        return quantity;
     }
-    public void setQuanityOfItems(int quanityOfItems) {
-        this.quanityOfItems = quanityOfItems;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }  
     
     public double getSubtotal() {
-        return quanityOfItems * retailItem.getPrice();
+        return this.quantity * this.retailItem.getPrice();
     }
 
     public double getTax() {
-        return getSubtotal() * 0.06;
+        return getSubtotal() * TAX_RATE;
     }
 
     public double getTotal() {

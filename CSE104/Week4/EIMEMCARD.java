@@ -18,8 +18,9 @@ public class EIMEMCARD {
                     double discount = (bill * rates[j]);
                     if (discount == (long) discount) {
                         sb.append((long) discount).append(" ");
-                    } else
+                    } else {
                         sb.append(discount).append(" ");
+                    }    
                     break;
                 }
                 j++;

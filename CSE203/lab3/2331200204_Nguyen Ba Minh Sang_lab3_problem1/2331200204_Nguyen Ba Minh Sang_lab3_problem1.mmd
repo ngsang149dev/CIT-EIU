@@ -11,12 +11,13 @@ classDiagram
 
     class CashRegister {
         - retailItem: RetailItem
-        - quanityOfItems: int
-        + CashRegister(retailItem: RetailItem)
+        - quantity: int
+        - TAX_RATE: double$
+        + CashRegister(retailItem: RetailItem, quantity: int)
         + getSubtotal() double
         + getTax() double
         + getTotal() double
 
     }
 
-    CashRegister o-- RetailItem
+    CashRegister --o RetailItem

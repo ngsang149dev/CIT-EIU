@@ -14,8 +14,8 @@ classDiagram
     class ParkingMeter {
         - purchasedMinutes: int 
         + ParkingMeter(purchasedMinutes: int)
-        + getPurchasedMinutes()
-        + setPurchasedMinutes()
+        + getPurchasedMinutes() int
+        + setPurchasedMinutes(purchasedMinutes: int) void
     }
 
     class ParkingTicket {
@@ -33,14 +33,17 @@ classDiagram
         - badgeNumber: String
         + examine(car: ParkedCar, meter: ParkingMeter) boolean
         + issueTicket(car: ParkedCar, meter: ParkingMeter) ParkingTicket
+        + getter()
+        + setter()
     }
 
     class Const {
-        + FIRST_HOUR_FINE$: int = 25
-        + ADDITIONAL_HOUR_FINE$: int = 10
+        <<final>>
+        + FIRST_HOUR_FINE: int = 25$
+        + ADDITIONAL_HOUR_FINE: int= 10$
     }
 
-    PoliceOfficer o-- ParkingTicket
+    PoliceOfficer --o ParkingTicket
     PoliceOfficer ..> ParkingMeter
-    ParkingTicket -- Const
+    PoliceOfficer --> Const
     PoliceOfficer ..> ParkedCar
