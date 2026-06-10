@@ -1,70 +1,71 @@
 package Week7;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class EISTULI {
+
+    static Scanner sc = new Scanner(System.in);
+    static StringBuilder sb = new StringBuilder();
+
+    public static void main(String[] args) {
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        List<Student> students = new ArrayList<>();
+        while (n > 0) {
+            int id = sc.nextInt();
+            String name = sc.next();
+            int course = sc.nextInt();
+            Student student = new Student(id, name);
+            for (int c = 0; c < course;c++) {
+                student.addScore(sc.nextInt());
+            }
+            students.add(student);
+            n--;
+        }
+        students.sort((s1, s2) -> {
+            return Double.compare(s2.getGpa(), s1.getGpa());
+        });
+
+        double standard = k < students.size() ? students.get(k).getGpa() : Double.MIN_VALUE;
+        for (int i = 0; i < students.size();i++) {
+            Student s = students.get(i);
+            if (s.getGpa() > standard) {
+                sb.append(s).append("\n");
+            } else break;
+        }
+        System.out.println(sb);
+    }
+
     static class Student {
         int id;
         String name;
-        double totalScore;
-        int passedCourses;
-        int totalCredit;
-
+        int totalScore;
+        int totalPassed;
+        int credit;
         public Student(int id, String name) {
             this.id = id;
             this.name = name;
-        } 
+        }
 
         public void addScore(int score) {
             if (score >= 50) {
                 totalScore+= score;
-                totalCredit+=4;
-                passedCourses++;
+                totalPassed++;
+                credit+= 4;
             }
         }
 
         public double getGpa() {
-            if (passedCourses == 0) {
-                return 0.0;
-            }
-            return totalScore / passedCourses;
+            return totalPassed == 0 ? 0 : totalScore / (double)totalPassed;
         }
 
         @Override
         public String toString() {
-            return "%s %s %s %s".formatted(this.id, this.name, Math.round(getGpa()), this.totalCredit);
-        }
-    }
-    static Scanner sc = new Scanner(System.in);
-    static StringBuilder sb = new StringBuilder();
-    public static void main(String[] args) {
-        int numberOfRecord = sc.nextInt();
-        int k = sc.nextInt();
-
-        ArrayList<Student> students = new ArrayList<>();
-        for (int t =0; t< numberOfRecord;t++) {
-            int id = sc.nextInt();
-            String name = sc.next();
-            int courses = sc.nextInt();
-            var student = new Student(id, name);
-            for (int i = 0; i < courses;i++) {
-                student.addScore(sc.nextInt());
-            }
-            students.add(student);
+            return "%s %s %s %s".formatted(this.id, this.name, Math.round(this.getGpa()), this.credit);
         }
 
-        students.sort((s1, s2) -> {
-            return Double.compare(s2.getGpa(), s1.getGpa());
-        });
         
-        double pivot =  (k < students.size()) ? students.get(k).getGpa() : -1;
-
-        for (int i = 0; i < students.size();i++) {
-            if (students.get(i).getGpa() > pivot) {
-                sb.append(students.get(i)).append("\n");
-            }
-        }
-        System.out.println(sb);
     }
 }

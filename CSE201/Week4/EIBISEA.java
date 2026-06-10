@@ -28,7 +28,8 @@ public class EIBISEA {
         int high = arr.length-1;
         int ans = -1;
         while (low <= high) {
-            int mid = low + (high-low) /2;
+            // int mid = low + (high-low) /2;
+            int mid = (low + high) >>> 1;
             if (arr[mid] == target) {
                 ans = mid;
                 high = mid-1; //continuing sliding to the left to find the first occurence

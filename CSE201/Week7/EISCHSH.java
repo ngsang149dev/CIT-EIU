@@ -51,7 +51,7 @@ public class EISCHSH {
             students.add(student);
         }
 
-        students.sort((s1, s2) -> {var cmp = Double.compare(s2.getGpa(), s1.getGpa()); if (cmp == 0) { Integer.compare(s1.id, s2.id);} return cmp; });
+        students.sort((s1, s2) -> {var cmp = Double.compare(s2.getGpa(), s1.getGpa()); if (cmp == 0) { cmp = Integer.compare(s1.id, s2.id);} return cmp; });
 
         int rank = 1;
         for (int i = 0; i < students.size();i++) {
@@ -61,7 +61,6 @@ public class EISCHSH {
             if (rank > k) break;
             sb.append(rank).append(" ").append(students.get(i)).append("\n");
         }
-        System.out.println("------------");
         System.out.println(sb);
     }
 }
