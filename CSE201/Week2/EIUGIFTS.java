@@ -24,8 +24,8 @@ public class EIUGIFTS {
         int bestDiff = -1;
         while (p1 < p2) {
             int sum = productMoneys[p1] + productMoneys[p2];
+            int diff = productMoneys[p2] - productMoneys[p1];
             if (sum <= money) {
-                int diff = productMoneys[p2] - productMoneys[p1];
                 if (sum > bestSum || (sum == bestSum && diff < bestDiff)) {
                     bestSum = sum;
                     bestDiff = diff;
