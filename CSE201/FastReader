@@ -1,8 +1,10 @@
-    /*
+ /*
 Bộ đọc dưới này, đừng sửa gì hết, k cần khai báo lại Reader, StringBuilder
      * Don't see below
      */
 
+    static Reader sc = new Reader();
+    static StringBuilder sb = new StringBuilder();
     static Random rd = new Random();
 
     static class Reader {
@@ -13,6 +15,22 @@ Bộ đọc dưới này, đừng sửa gì hết, k cần khai báo lại Reade
 
         public Reader() {
             this.rd = System.in;
+        }
+
+        public Reader(String nameFile) {
+            try {
+                this.rd = new FileInputStream(nameFile);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+
+        public void close() {
+            try {
+                rd.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
         private byte read() {

@@ -30,7 +30,7 @@ public class EIUASSEMBLY {
             }
 
             long min = 0, max = (long)2e12;
-            while (min + 1 < max) {
+            while (min +1< max) {
                 long mid = (min + max) >>> 1;
                 long cost = calculateCostToIncrease(robots, mid, budget);
                 if (cost <= budget) {
