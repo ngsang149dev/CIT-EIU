@@ -1,7 +1,5 @@
 package CSE203.lab4.prb4;
 
-
-
 import java.util.UUID;
 
 public class Brand {
