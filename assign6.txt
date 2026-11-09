@@ -1,0 +1,46 @@
+Interface OldBridge:
+	FUNCTION arrive(dir)
+		//xe xin len cau
+	FUNCTION exit(dir)
+		//xe roi cau
+
+CAR_THREAD(dir):
+	Sleep(random time)
+	bridge.arrive(dir)
+	Sleep(10ms) //simulation qua cau
+	
+	bridge.exit(dir) 
+
+FUNCTION arrive(dir):
+	LOCK(lock)
+	try: 
+		if (dir ==0):   //xe 0 wait
+			While dirCount ==carsMax or dir1Count >0    //enough 3 cars or nguoc huong
+				wait(canEnterDir0)  
+			dir0Count++    //both wrong, xe enter bridge
+		else: // xe 1 wait
+			While dir1Count == carsMax or dir0Count >0
+				wait(canEnterDir1)
+			dir1Count++
+	finally:
+		UNLOCK(lock)
+
+FUNCTION exit(dir):
+	LOCK(lock)
+	try:
+		if dir ==0:
+			dir0Count--
+		else: 
+			dir1Count--
+
+		if dir0Count >0:  //con xe huong 0
+			SIGNAL(canEnterDir0)
+		else if dir1Count >0:  //con xe huong 1
+			SIGNAL(canEnterDir1)
+		else:  // empty -> signal all to check if
+			SIGNAL_ALL(canEnterDir0)
+			SIGNAL_ALL(canEnterDir1)
+	finally:
+		UNLOCK(lock)
+
+				
